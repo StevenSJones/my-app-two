@@ -1,12 +1,18 @@
 import React from "react";
 import HelloDiv from "./components/HelloDiv";
+import Navigation from "./components/Navigation";
+import favorites from "./data/favorites";
+import names from "./data/names";
+
 
 function App() {
-  return(
-  <>
-    <HelloDiv name="Steven Jones" />
-    <HelloDiv name="Slick Jones" />
-  </>
+  let favoriteThings = favorites;
+  return (
+    <>
+      <Navigation />
+      <HelloDiv name={names[0]} favorites={favoriteThings} />
+      <HelloDiv name={names[1]} favorites={favoriteThings}/>
+    </>
   );
 }
 
