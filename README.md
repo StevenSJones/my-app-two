@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Notes
+> incorporate a DB (mysql or mongoose)
+> define a schema with one table of people (id and person name so each person has an id) and one of favoriteThings (with id, name of favorite thing, and id from the person table to tie the tables together)
+
