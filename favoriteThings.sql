@@ -11,3 +11,11 @@ CREATE TABLE names(
   PRIMARY KEY (id)
 );
 
+-- creating a table called favorites
+CREATE TABLE favorites(
+  id INT NOT NULL AUTO_INCREMENT,
+  favoriteItem VARCHAR(30) DEFAULT '' NOT NULL,
+  names_id INT NOT NULL,
+  PRIMARY KEY (id)
+);
+
