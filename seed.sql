@@ -1,6 +1,6 @@
--- The CREATE DATABASE statement is used to create a new SQL database.
+-- The USE statement is used to signify that we are now working in the SQL database that is named in the USE statement.
 USE favoriteThings;
---The INSERT INTO statement is used here to insert rows into the names table in the order I specifiy in THIS STATEMENT BELOW
+--The INSERT INTO statement is used here to insert rows (insertions) with the values given after the word VALUES into the  table mspecififed in the order I specifiy in this statement below under the Columns (labels) that are in the () following the INSERT INTO statement
 INSERT INTO names (first_name, last_name, name_id)
 VALUES 
 ('Moriah', 'Kincheloe', 1),
@@ -52,7 +52,7 @@ VALUES
 ('Bart', 'Simpson', 47),
 ('Bruce', 'Wayne', 48),
 ('Manuel', 'Herrera', 49),
-('Willy', 'Wilson', 50);--the VALUES inserted into the table
+('Willy', 'Wilson', 50);--the VALUES inserted into the table must end in a ; or the statement will not be closed.
 
 INSERT INTO threeFavorites (favorite_1, favorite_2, favorite_3, names_id)
 VALUES 
@@ -105,4 +105,4 @@ VALUES
 ('skateboarding', 'jokes', 'pranks', 47),
 ('family', 'crusading', 'fighting', 48),
 ('construction', 'bricks', 'mortar', 49),
-('pickles', 'parrots', 'people', 50);
+('pickles', 'parrots', 'people', 50);--the VALUES inserted into the table must end in a ; or the statement will not be closed.
