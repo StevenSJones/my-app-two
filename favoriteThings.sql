@@ -13,7 +13,7 @@ CREATE TABLE names(
 );
 
 -- creating a table called favorites
-CREATE TABLE favorites(
+CREATE TABLE threeFavorites(
   favorite_1 VARCHAR(30) DEFAULT '' NOT NULL,
   favorite_2 VARCHAR(30) DEFAULT '' NOT NULL,
   favorite_3 VARCHAR(30) DEFAULT '' NOT NULL,
