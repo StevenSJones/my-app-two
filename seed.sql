@@ -54,7 +54,7 @@ VALUES
 ('Manuel', 'Herrera', 49),
 ('Willy', 'Wilson', 50);--the VALUES inserted into the table must end in a ; or the statement will not be closed.
 
-INSERT INTO threeFavorites (favorite_1, favorite_2, favorite_3, names_id)
+INSERT INTO threeFavorites (favorite_1, favorite_2, favorite_3, threeFavorites_id, name_id)
 VALUES 
 ('cards', 'movies', 'crab', 1),
 ('takis', 'Playstation', 'beer', 2),

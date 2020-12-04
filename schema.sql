@@ -17,6 +17,7 @@ CREATE TABLE threeFavorites(
   favorite_1 VARCHAR(30) DEFAULT '' NOT NULL,
   favorite_2 VARCHAR(30) DEFAULT '' NOT NULL,
   favorite_3 VARCHAR(30) DEFAULT '' NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
   names_id INT NOT NULL,
   PRIMARY KEY (id)
 );
