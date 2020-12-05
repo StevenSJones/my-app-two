@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Jumbotron, Row, Col } from "react-bootstrap";
+import axios from "axios";
 
 /*two ways to pass in data:
 1) inside the component you can create a variable (hardcoded) and place the name that you assign the variable into curly brackets in the return statement in the component || (OR) 
