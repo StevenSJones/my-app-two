@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const mysql = require("mysql");
-//requiring the necessary pieces of a server, including morgan for logging, express as the server. 
+//requiring the necessary pieces of a server, including morgan for logging, express as the server.
 
 //server connection to the db
 const connection = mysql.createConnection({
@@ -29,12 +29,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //this is the joining of the two tables as well as the result and error.
-app.get("/favoriteThings", function(req, res){
-    const query = "select n.first_name, n.last_name, t.favorite1, t.favorite2, t.favorite3 FROM names n INNER JOIN threeFavorites t ON n.id = t.names_id";
-connection.query(query, function(result, err){
+app.get("/favoriteThings", function (req, res) {
+  const query =
+    "select n.first_name, n.last_name, t.favorite1, t.favorite2, t.favorite3 FROM names n INNER JOIN threeFavorites t ON n.id = t.names_id";
+  connection.query(query, function (result, err) {
     if (err) throw err;
     res.send(result);
-})
+  });
 });
 //actually listening on the port for requests
 app.listen(PORT, () => {
