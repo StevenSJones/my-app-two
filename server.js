@@ -1,9 +1,10 @@
 const express = require("express");
 const morgan = require("morgan");
 const mysql = require("mysql");
-//requiring the necessary pieces of a server, including morgan for logging, express as the server.
+const cors = require('cors')
+//requiring the necessary pieces of a server, including morgan for logging, express as the server, cors and mysql
 
-//server connection to the db
+//server connection to the db including the port for the server (dialing but not sending the call)
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -12,17 +13,19 @@ const connection = mysql.createConnection({
   datbase: "favoriteThings",
 });
 
-//interface to mysql
+//interface to mysql (the actual connection)
 connection.connect(function (err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
 });
 
-//port
+//port for the application
 const PORT = process.env.PORT || 7800;
 const app = express();
 
-//morgan logger
+
+//using the imports from above, after they are used with app.use I can actually perform actions with them
+app.use(cors())
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
