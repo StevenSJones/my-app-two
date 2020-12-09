@@ -41,7 +41,7 @@ app.get("/favoriteThings", function (req, res) {
     res.send(result);
   });
 });
-//actually listening on the port for requests
+//actually listening on the port for requests (dialing the number)
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
